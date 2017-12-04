@@ -1,0 +1,21 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: 
+  password: 
+  socket: /tmp/mysql.sock
+
+development:
+  <<: *default
+  database: rails_react_dev
+
+test:
+  <<: *default
+  database: rails_react_test
+
+production:
+  <<: *default
+  database: 
+  username: 
+  password: <%= ENV['GRAPHRELAY_DATABASE_PASSWORD'] %>
