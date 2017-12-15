@@ -18,7 +18,7 @@ class App extends Component {
     let { counter } = this.state;
     return (
       <div>        
-          <h1> Tesing component </h1>   
+          <h1> Testing component </h1>   
           <h1> Counter: {counter} </h1>   
           <button onClick={this.increment}>Increment</button>
       </div>

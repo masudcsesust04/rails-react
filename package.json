@@ -9,7 +9,8 @@
     "enzyme-adapter-react-16": "^1.1.0",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "react-router-dom": "^4.2.2"
   },
   "devDependencies": {
     "babel-jest": "^21.2.0",
@@ -20,7 +21,8 @@
     "webpack-dev-server": "^2.9.5"
   },
   "scripts": {
-    "test": "jest test --env=jsdom --setupTestFrameworkScriptFile=raf/polyfill"    
+    "build": "webpack --progress -d",
+    "test": "jest test --env=jsdom --setupTestFrameworkScriptFile=raf/polyfill"
   },
   "jest": {
     "roots": [
