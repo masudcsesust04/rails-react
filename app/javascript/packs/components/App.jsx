@@ -15,7 +15,6 @@ class App extends React.Component {
                     <li><Link to="/">Root</Link></li>
                     <li><Link to="/home">Home</Link></li>
                     <li><Link to="/users">User</Link></li>
-                    <li><Link to="/users/1/masud">User 1</Link></li>
                 </ul>
 
                 <Route exact path={"/"} component={Root} />
