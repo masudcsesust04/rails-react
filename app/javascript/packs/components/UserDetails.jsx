@@ -11,8 +11,8 @@ export class UserDetails extends React.Component {
         return (
             <div>
                 <h1>User details</h1>
-                <p> User id# {this.props.match.params.id}</p>
-                <p> User name# {this.props.match.params.name}</p>
+                <p> ID: {this.props.match.params.id}</p>
+                <p> Name: {this.props.match.params.name}</p>
             </div>
         );
     }
