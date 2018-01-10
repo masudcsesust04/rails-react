@@ -6,8 +6,7 @@ const Header = () => (
     <div className="container">
       <div className="navbar-header">
         <ul className="nav navbar-nav">
-          <li><Link to="/" href>Root</Link></li>
-          <li><Link to="/home" href>Home</Link></li>
+          <li><Link to="/" href>Home</Link></li>
           <li><Link to="/users" href>User</Link></li>
           <li><Link to="/games" href>Game</Link></li>
         </ul>
