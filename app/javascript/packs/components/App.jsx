@@ -19,6 +19,7 @@ class App extends React.Component {
             <Route exact path="/" component={Root} />
             <Route exact path="/users" component={User} />
             <Route exact path="/users/:id/:name" component={UserDetails} />
+            <Route exact path="/games" component={Game} />
             <Route component={NotFound} />
           </Switch>
         </div>
