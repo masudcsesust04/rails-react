@@ -1,41 +1,41 @@
-import React from "react";
+import React from 'react';
 
-export class User extends React.Component {
+class User extends React.Component {
+  render() {
+    const users = [
+      { id: 1, name: 'Masud Rana', email: 'm.rana@example.com' },
+      { id: 2, name: 'Md. Masud', email: 'masud@example.com' },
+      { id: 3, name: 'Md. Rana', email: 'rana@example.com' },
+    ];
 
-    render() {
+    const rows = users.map(user => (
+      <tr key={user.id}>
+        <td><a href={`/users/${user.id}/${user.name}`}>{user.id}</a></td>
+        <td>{user.name}</td>
+        <td>{user.email}</td>
+      </tr>
+    ));
 
-        const users = [
-            {id: 1, name: 'Masud Rana', email: 'm.rana@example.com'},
-            {id: 2, name: 'Md. Masud', email: 'masud@example.com'},
-            {id: 3, name: 'Md. Rana', email: 'rana@example.com'}
-        ];
+    return (
+      <div>
+        <h3>List of users</h3>
 
-        const rows = users.map((user) => (
-            <tr key={user.id}>
-                <td><a href={`/users/${user.id}/${user.name}`}>{user.id}</a></td>
-                <td>{user.name}</td>
-                <td>{user.email}</td>
+        <table>
+          <thead>
+            <tr>
+              <th width="20%">#</th>
+              <th width="40%">Name</th>
+              <th width="40%">Email</th>
             </tr>
-        ));
+          </thead>
 
-        return (
-            <div>
-                <h3>List of users</h3>
-
-                <table>
-                    <thead>
-                        <tr>
-                            <th width="20%">#</th>
-                            <th width="40%">Name</th>
-                            <th width="40%">Email</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                    {rows}
-                    </tbody>
-                </table>
-            </div>    
-        );
-    }
+          <tbody>
+            {rows}
+          </tbody>
+        </table>
+      </div>
+    );
+  }
 }
+
+export default User;
