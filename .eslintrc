@@ -1,19 +1,24 @@
 {
-    "extends": "airbnb",
-    "env": {
-      "browser": true,
-      "es6": true,
-      "jest": true
-    },
-    "plugins": [
-      "react",
-      "jest"
-    ],
-    "parserOptions": {
-      "ecmaVersion": 6,
-      "sourceType": "module",
-      "ecmaFeatures": {
-        "jsx": true
-      }
+  "extends": "airbnb",
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "plugins": [
+    "react",
+    "jest"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
     }
+  },
+  "rules": {
+    "react/prefer-stateless-function": "off",
+    "indent": [2, 2],
+    "no-tabs": 0
   }
+}
