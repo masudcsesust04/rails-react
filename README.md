@@ -32,7 +32,7 @@ sudo npm install -g yarn
 ### Check out master branch
 ```
 git fetch
-git checkbout development
+git checkbout master
 ```
 
 ### Install node packages using yarn
@@ -67,5 +67,6 @@ bundle exec rake db:seed
 ```
 bundle exec rails s
 ```
+
 ### Deployment instructions
 ....
