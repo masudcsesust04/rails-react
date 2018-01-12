@@ -1,24 +1,71 @@
-# README
+# RAILS-REACT
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Sample application to create web application using Ruby on Rails and reactJS. Please make sure you have installed ruby, nodejs, npm, yarn, mysql etc.
 
-Things you may want to cover:
+### Intall ruby 2.4.2 using rbenv
+```
+rbenv install 2.4.2
+rbenv rehash
+```
 
-* Ruby version
+### System dependencies
+```
+gem install bundler
+bundle install --path vendor/bundle
+```
 
-* System dependencies
+### Check nodeJS version (>=v6.12.3)
+```
+node -v or nodejs -v
+```
 
-* Configuration
+### Node package manager version (>=3.10.10)
+```
+npm --version
+```
 
-* Database creation
+### Install yarn
+```
+sudo npm install -g yarn
+```
 
-* Database initialization
+### Check out master branch
+```
+git fetch
+git checkbout development
+```
 
-* How to run the test suite
+### Install node packages using yarn
+```
+yarn install
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+### Configuration 
+Save as following files as yml. Update database configuration and development secret key.
+```
+config/database.yml.example
+config/secrets.yml.example
+config/webpacker.yml.example
+```
 
-* Deployment instructions
+### Database creation
+```
+bundle exec rake db:create
+```
 
-* ...
+### Database initialization
+```
+bundle exec rake db:migrate
+```
+
+### Load seed data
+```
+bundle exec rake db:seed
+```
+
+### Run application
+```
+bundle exec rails s
+```
+### Deployment instructions
+....
