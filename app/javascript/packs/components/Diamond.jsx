@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class Diamond extends React.Component {
   constructor(props) {
@@ -44,13 +45,13 @@ class Diamond extends React.Component {
 
         <p>
           <b>Filter by: </b>
-          <a href={`/diamonds/${filters[0].shape}/${filters[0].color}/${filters[0].clarity}/${filters[0].lab}/${filters[0].polish}`}>
+          <Link to={`/diamonds/${filters[0].shape}/${filters[0].color}/${filters[0].clarity}/${filters[0].lab}/${filters[0].polish}`} href>
             Shape, color, clarity, lab and polish
-          </a>
+          </Link>
           &nbsp;&nbsp;|&nbsp;&nbsp;
-          <a href={`/diamonds/${filters[1].weight}/${filters[1].length}/${filters[1].width}/${filters[1].price}`}>
+          <Link to={`/diamonds/${filters[1].weight}/${filters[1].length}/${filters[1].width}/${filters[1].price}`} href>
             Weight, Length, Width and Price
-          </a>
+          </Link>
         </p>
 
         <table className="table">
