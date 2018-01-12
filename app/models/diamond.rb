@@ -1,0 +1,2 @@
+class Diamond < ApplicationRecord
+end
