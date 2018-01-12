@@ -1,33 +1,28 @@
 import React from 'react';
 
 class Diamond extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { diamonds: [] };
+  }
+  componentDidMount() {
+    console.log(this.props);
+    fetch('/diamonds.json')
+      .then((Response) => Response.json())
+      .then((response) => {
+        console.log(response);
+        this.setState({
+            diamonds: response.data,
+        });
+      });
+  }
   render() {
-    const diamonds = [
-      { id: 1, shape: 'RD', weight: 0.90, color: 'F', clarity: 'VS1', length: 6.06, width: 6.06, lab: 'GIA', price: 100, polish: 'VG' },
-      { id: 2, shape: 'RD', weight: 0.80, color: 'R', clarity: 'VS2', length: 5.06, width: 6.06, lab: 'GIA', price: 80, polish: 'VG' },
-      { id: 3, shape: 'RD', weight: 0.70, color: 'G', clarity: 'VS3', length: 6.06, width: 6.06, lab: 'GIA', price: 90, polish: 'VG' },
-      { id: 4, shape: 'RD', weight: 0.60, color: 'B', clarity: 'VS1', length: 6.06, width: 6.06, lab: 'GIA', price: 300, polish: 'VG' },
-      { id: 5, shape: 'AS', weight: 0.90, color: 'F', clarity: 'VS2', length: 6.06, width: 6.06, lab: 'GIA', price: 90, polish: 'VG' },
-      { id: 6, shape: 'AS', weight: 0.80, color: 'G', clarity: 'VS3', length: 6.06, width: 6.06, lab: 'GIA', price: 50, polish: 'VG' },
-      { id: 7, shape: 'AS', weight: 0.70, color: 'B', clarity: 'VS1', length: 6.06, width: 6.06, lab: 'GIA', price: 500, polish: 'VG' },
-      { id: 8, shape: 'PR', weight: 0.90, color: 'F', clarity: 'VS2', length: 6.06, width: 6.06, lab: 'GIA', price: 40, polish: 'VG' },
-      { id: 9, shape: 'PR', weight: 0.80, color: 'R', clarity: 'VS3', length: 6.06, width: 6.06, lab: 'GIA', price: 95, polish: 'VG' },
-      { id: 10, shape: 'PR', weight: 0.70, color: 'G', clarity: 'VS1', length: 6.06, width: 6.06, lab: 'GIA', price: 90, polish: 'VG' },
-      { id: 11, shape: 'CU', weight: 0.90, color: 'R', clarity: 'VS2', length: 6.06, width: 6.06, lab: 'GIA', price: 45, polish: 'VG' },
-      { id: 12, shape: 'CU', weight: 0.80, color: 'G', clarity: 'VS3', length: 6.06, width: 6.06, lab: 'GIA', price: 70, polish: 'VG' },
-      { id: 13, shape: 'CU', weight: 0.70, color: 'B', clarity: 'VS1', length: 6.06, width: 6.06, lab: 'GIA', price: 75, polish: 'VG' },
-      { id: 14, shape: 'OV', weight: 0.90, color: 'F', clarity: 'VS2', length: 6.06, width: 6.06, lab: 'GIA', price: 80, polish: 'VG' },
-      { id: 15, shape: 'OV', weight: 0.80, color: 'R', clarity: 'VS3', length: 6.06, width: 6.06, lab: 'GIA', price: 85, polish: 'VG' },
-      { id: 16, shape: 'OV', weight: 0.70, color: 'G', clarity: 'VS1', length: 6.06, width: 6.06, lab: 'GIA', price: 200, polish: 'VG' },
-      { id: 17, shape: 'ER', weight: 0.90, color: 'F', clarity: 'VS1', length: 6.06, width: 6.06, lab: 'GIA', price: 500, polish: 'VG' },
-    ];
-
     const filters = [
       {shape: 'RD', color: 'F', clarity: 'VS1', lab: 'GIA', polish: 'VG' },
       {weight: 0.90, length: 6.06, width: 6.06, price: 100 },
     ];
 
-    const rows = diamonds.map(diamond => (
+    const rows = this.state.diamonds.map(diamond => (
       <tr key={diamond.id}>
         <td>{diamond.id}</td>
         <td>{diamond.shape}</td>
