@@ -18,6 +18,7 @@ const Header = () => (
           <li><Link to="/users" href>Users</Link></li>
           <li><Link to="/diamonds" href>Diamonds</Link></li>
           <li><Link to="/games" href>Game</Link></li>
+          <li><Link to="/cric" href>Cric News</Link></li>
         </ul>
       </div>
     </div>

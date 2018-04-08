@@ -8,6 +8,8 @@ import UserDetails from './UserDetails';
 import Game from './Game';
 import Diamond from './Diamond';
 import DiamondSearch from './DiamondSearch';
+import CricNews from './CricNews';
+import CricNewsSearch from './CricNewsSearch';
 import NotFound from './NotFound';
 
 class App extends React.Component {
@@ -16,7 +18,6 @@ class App extends React.Component {
       <Router>
         <div>
           <Header />
-
           <Switch>
             <Route exact path="/" component={Root} />
             <Route exact path="/users" component={User} />
@@ -24,6 +25,8 @@ class App extends React.Component {
             <Route exact path="/games" component={Game} />
             <Route exact path="/diamonds" component={Diamond} />
             <Route exact path="/diamonds/:shape/:color/:clarity/:lab/:polish" component={DiamondSearch} />
+            <Route exact path="/cric" component={CricNews} />
+            <Route exact path="/news_search/:tag" component={CricNewsSearch} />
             <Route component={NotFound} />
           </Switch>
         </div>
